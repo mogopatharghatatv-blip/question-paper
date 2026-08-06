@@ -331,24 +331,24 @@
   .p-institute{
     font-family:'SolaimanLipi','Times New Roman',Times,serif;
     font-weight:700;
-    font-size:29px;
+    font-size:25px;
     color:#000;
     margin:0;
     letter-spacing:0.3px;
   }
   .p-address{
-    font-size:16px;
+    font-size:18px;
     margin:4px 0 0;
     color:#000;
   }
   .p-exam{
-    font-size:16px;
+    font-size:18px;
     font-weight:700;
     margin:8px 0 0;
     color:#000;
   }
   .p-classline{
-    font-size:16px;
+    font-size:18px;
     margin:6px 0 0;
     color:#000;
   }
@@ -357,7 +357,7 @@
     justify-content:space-between;
     align-items:baseline;
     margin:22px 0 6px;
-    font-size:15.5px;
+    font-size:16px;
     font-weight:700;
   }
   .p-divider{
@@ -377,7 +377,7 @@
     gap:14px;
   }
   .p-qtext{
-    font-size:18px;
+    font-size:16px;
     line-height:1.7;
     flex:1;
   }
@@ -389,14 +389,14 @@
     white-space:pre;
     font-family:'SolaimanLipi','Courier New',monospace;
     letter-spacing:1px;
-    font-size:19px;
+    font-size:16px;
     line-height:1.5;
     display:inline-block;
     margin-top:6px;
     vertical-align:top;
   }
   .p-qmarks{
-    font-size:18px;
+    font-size:16px;
     font-weight:700;
     white-space:nowrap;
     min-width:34px;
@@ -408,7 +408,7 @@
   }
   .p-arabic{
     font-family:'Amiri Quran', serif;
-    font-size:26px;
+    font-size:16px;
     direction:rtl;
     color:#000;
   }
@@ -420,20 +420,36 @@
     padding:20px;
   }
 
+  @page{
+    size: A4;
+    margin: 0;
+  }
   @media print{
-    body{background:#fff;}
+    html, body{
+      width:210mm;
+      height:297mm;
+      margin:0;
+      background:#fff;
+    }
     .editor{display:none;}
     .preview-wrap{
       padding:0;
       background:#fff;
       max-height:none;
       overflow:visible;
+      display:block;
     }
     .app{display:block;}
     #paper{
       box-shadow:none;
-      width:100%;
+      width:210mm;
+      height:297mm;
       min-height:auto;
+      max-height:297mm;
+      margin:0;
+      padding:14mm 15mm 12mm;
+      overflow:hidden;
+      page-break-after:avoid;
     }
   }
 
@@ -461,11 +477,11 @@
     </div>
     <div class="field">
       <label>ঠিকানা</label>
-      <input id="address" type="text" value="মঠবাড়িয়া - পিরোজপুর">
+      <input id="address" type="text" value="কালুশাহ্ সড়ক, বরিশাল সদর, বরিশাল">
     </div>
     <div class="field">
       <label>পরীক্ষার নাম</label>
-      <input id="examname" type="text" value="মডেলটেস্ট পরীক্ষা - ২০২৬ইং">
+      <input id="examname" type="text" value="প্রথম সাময়িক পরীক্ষা - ২০২৬ইং">
     </div>
     <div class="row2">
       <div class="field">
