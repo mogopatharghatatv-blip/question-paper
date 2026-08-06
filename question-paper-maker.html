@@ -300,6 +300,155 @@
   }
   .pdf-btn:hover{filter:brightness(1.08);}
 
+  /* ---------- AUTH GATE ---------- */
+  .authgate{
+    position:fixed;
+    inset:0;
+    background:#0d1712;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:100;
+    padding:20px;
+  }
+  .authgate-card{
+    background:var(--panel-2);
+    border:1px solid rgba(201,162,75,0.25);
+    border-radius:14px;
+    padding:36px 30px;
+    max-width:340px;
+    text-align:center;
+  }
+  .authgate-title{
+    font-family:'Baloo Da 2', sans-serif;
+    font-weight:700;
+    font-size:20px;
+    color:var(--panel-accent);
+    margin:0 0 8px;
+  }
+  .authgate-sub{
+    font-size:13.5px;
+    color:#b7c0b3;
+    margin:0 0 22px;
+    line-height:1.6;
+  }
+  .google-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:100%;
+    background:#fff;
+    color:#3c4043;
+    border:none;
+    border-radius:8px;
+    padding:12px;
+    font-family:'Hind Siliguri', sans-serif;
+    font-weight:600;
+    font-size:14.5px;
+    cursor:pointer;
+  }
+  .google-btn:hover{background:#f4f4f4;}
+  .authgate-status{
+    font-size:12.5px;
+    color:#e39b9b;
+    min-height:16px;
+    margin:14px 0 0;
+  }
+
+  /* ---------- USER BAR & PAPERS LIST ---------- */
+  .userbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    background:rgba(201,162,75,0.08);
+    border-radius:8px;
+    padding:9px 12px;
+    margin-bottom:18px;
+    font-size:12.5px;
+    color:#cfd6c9;
+  }
+  .userbar-email{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  .signout-btn{
+    background:none;
+    border:1px solid rgba(201,162,75,0.35);
+    color:var(--panel-accent);
+    border-radius:6px;
+    padding:5px 10px;
+    font-size:11.5px;
+    cursor:pointer;
+    font-family:'Hind Siliguri', sans-serif;
+    white-space:nowrap;
+  }
+  .signout-btn:hover{background:rgba(201,162,75,0.12);}
+  .papers-panel{
+    margin-bottom:6px;
+  }
+  .new-paper-btn{
+    width:100%;
+    background:var(--panel-accent);
+    color:#20342a;
+    border:none;
+    border-radius:8px;
+    padding:10px;
+    font-weight:700;
+    font-size:13.5px;
+    cursor:pointer;
+    font-family:'Hind Siliguri', sans-serif;
+    margin-bottom:10px;
+  }
+  .new-paper-btn:hover{filter:brightness(1.06);}
+  .papers-list{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    max-height:160px;
+    overflow-y:auto;
+  }
+  .paper-item{
+    background:var(--panel-2);
+    border:1px solid rgba(201,162,75,0.16);
+    border-radius:7px;
+    padding:8px 10px;
+    font-size:12.5px;
+    color:#cfd6c9;
+    cursor:pointer;
+    text-align:left;
+  }
+  .paper-item:hover{border-color:rgba(201,162,75,0.5);}
+  .paper-item.active{
+    border-color:var(--panel-accent);
+    background:rgba(201,162,75,0.12);
+  }
+  .paper-item .pi-title{
+    font-weight:600;
+    color:#eef1ea;
+    display:block;
+    margin-bottom:2px;
+  }
+  .paper-item .pi-meta{
+    font-size:11px;
+    color:#8a9587;
+  }
+  .papers-empty{
+    font-size:12px;
+    color:#8a9587;
+    text-align:center;
+    padding:10px 0;
+  }
+  .save-status{
+    font-size:12px;
+    color:#a9b3a5;
+    text-align:center;
+    margin:8px 0 0;
+    min-height:16px;
+  }
+
   /* ---------- PREVIEW PANEL ---------- */
   .preview-wrap{
     background:#12201a;
@@ -331,24 +480,24 @@
   .p-institute{
     font-family:'SolaimanLipi','Times New Roman',Times,serif;
     font-weight:700;
-    font-size:25px;
+    font-size:29px;
     color:#000;
     margin:0;
     letter-spacing:0.3px;
   }
   .p-address{
-    font-size:18px;
+    font-size:16px;
     margin:4px 0 0;
     color:#000;
   }
   .p-exam{
-    font-size:18px;
+    font-size:16px;
     font-weight:700;
     margin:8px 0 0;
     color:#000;
   }
   .p-classline{
-    font-size:18px;
+    font-size:16px;
     margin:6px 0 0;
     color:#000;
   }
@@ -357,7 +506,7 @@
     justify-content:space-between;
     align-items:baseline;
     margin:22px 0 6px;
-    font-size:16px;
+    font-size:15.5px;
     font-weight:700;
   }
   .p-divider{
@@ -377,7 +526,7 @@
     gap:14px;
   }
   .p-qtext{
-    font-size:16px;
+    font-size:18px;
     line-height:1.7;
     flex:1;
   }
@@ -389,14 +538,14 @@
     white-space:pre;
     font-family:'SolaimanLipi','Courier New',monospace;
     letter-spacing:1px;
-    font-size:16px;
+    font-size:19px;
     line-height:1.5;
     display:inline-block;
     margin-top:6px;
     vertical-align:top;
   }
   .p-qmarks{
-    font-size:16px;
+    font-size:18px;
     font-weight:700;
     white-space:nowrap;
     min-width:34px;
@@ -408,7 +557,7 @@
   }
   .p-arabic{
     font-family:'Amiri Quran', serif;
-    font-size:16px;
+    font-size:26px;
     direction:rtl;
     color:#000;
   }
@@ -420,36 +569,21 @@
     padding:20px;
   }
 
-  @page{
-    size: A4;
-    margin: 0;
-  }
   @media print{
-    html, body{
-      width:210mm;
-      height:297mm;
-      margin:0;
-      background:#fff;
-    }
+    body{background:#fff;}
     .editor{display:none;}
+    .authgate{display:none !important;}
     .preview-wrap{
       padding:0;
       background:#fff;
       max-height:none;
       overflow:visible;
-      display:block;
     }
     .app{display:block;}
     #paper{
       box-shadow:none;
-      width:210mm;
-      height:297mm;
+      width:100%;
       min-height:auto;
-      max-height:297mm;
-      margin:0;
-      padding:14mm 15mm 12mm;
-      overflow:hidden;
-      page-break-after:avoid;
     }
   }
 
@@ -463,12 +597,39 @@
 </style>
 </head>
 <body>
-<div class="app">
+
+<!-- AUTH GATE -->
+<div class="authgate" id="authGate">
+  <div class="authgate-card">
+    <p class="authgate-title">প্রশ্নপত্র তৈরির অ্যাপ</p>
+    <p class="authgate-sub">প্রশ্নপত্র তৈরি ও সংরক্ষণ করতে গুগল অ্যাকাউন্ট দিয়ে সাইন ইন করো।</p>
+    <button class="google-btn" id="googleSignInBtn">
+      <svg width="18" height="18" viewBox="0 0 18 18"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 01-1.8 2.72v2.26h2.9c1.7-1.57 2.7-3.88 2.7-6.62z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.9-2.26c-.8.54-1.84.86-3.06.86-2.35 0-4.34-1.59-5.05-3.72H.98v2.33A9 9 0 009 18z"/><path fill="#FBBC05" d="M3.95 10.7A5.4 5.4 0 013.68 9c0-.59.1-1.17.27-1.7V4.97H.98A9 9 0 000 9c0 1.45.35 2.83.98 4.03l2.97-2.33z"/><path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58C13.46.89 11.43 0 9 0A9 9 0 00.98 4.97l2.97 2.33C4.66 5.17 6.65 3.58 9 3.58z"/></svg>
+      গুগল দিয়ে সাইন ইন করো
+    </button>
+    <p class="authgate-status" id="authStatus"></p>
+  </div>
+</div>
+
+<div class="app" id="appRoot" style="display:none;">
 
   <!-- EDITOR -->
   <div class="editor">
     <p class="editor-title">প্রশ্নপত্র তৈরির অ্যাপ</p>
-    <p class="editor-sub">তথ্য পূরণ করো, ডান পাশে সরাসরি প্রিভিউ দেখতে পাবে। শেষে পিডিএফ ডাউনলোড করো।</p>
+    <p class="editor-sub">তথ্য পূরণ করো, ডান পাশে সরাসরি প্রিভিউ দেখতে পাবে। লেখা সাথে সাথেই সেভ হয়ে যাবে।</p>
+
+    <div class="userbar">
+      <span class="userbar-email" id="userEmail"></span>
+      <button class="signout-btn" id="signOutBtn">সাইন আউট</button>
+    </div>
+
+    <div class="section-label">তোমার প্রশ্নপত্রসমূহ</div>
+    <div class="papers-panel">
+      <button class="new-paper-btn" id="newPaperBtn">+ নতুন প্রশ্নপত্র</button>
+      <div class="papers-list" id="papersList">
+        <p class="papers-empty">এখনো কোনো প্রশ্নপত্র সেভ হয়নি।</p>
+      </div>
+    </div>
 
     <div class="section-label">প্রতিষ্ঠানের তথ্য</div>
     <div class="field">
@@ -477,11 +638,11 @@
     </div>
     <div class="field">
       <label>ঠিকানা</label>
-      <input id="address" type="text" value="কালুশাহ্ সড়ক, বরিশাল সদর, বরিশাল">
+      <input id="address" type="text" value="বরিশাল সদর, বরিশাল">
     </div>
     <div class="field">
       <label>পরীক্ষার নাম</label>
-      <input id="examname" type="text" value="প্রথম সাময়িক পরীক্ষা - ২০২৬ইং">
+      <input id="examname" type="text" value="প্রথম সাময়িক পরীক্ষা - ২০২৬ ইং">
     </div>
     <div class="row2">
       <div class="field">
@@ -520,10 +681,9 @@
     </div>
 
     <div class="draft-row">
-      <button class="draft-btn" id="saveDraftBtn">খসড়া সেভ করো</button>
-      <button class="draft-btn" id="loadDraftBtn">খসড়া লোড করো</button>
+      <button class="draft-btn" id="saveDraftBtn">এখনই সেভ করো</button>
     </div>
-    <p class="draft-status" id="draftStatus"></p>
+    <p class="save-status" id="saveStatus"></p>
 
     <button class="pdf-btn" id="downloadBtn">পিডিএফ ডাউনলোড করো</button>
   </div>
@@ -738,74 +898,205 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
   window.print();
 });
 
-// ---- Draft save/load (persists so you can come back later and finish writing) ----
-const DRAFT_KEY = 'question-paper-draft';
-const draftStatus = document.getElementById('draftStatus');
-const fieldIds = ['institute','address','examname','classname','subject','time','fullmarks','arabicline'];
+renderEditor();
+renderPreview();
+updateTotals();
+</script>
 
-function collectDraft(){
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut }
+  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getFirestore, collection, addDoc, updateDoc, doc, query, where, onSnapshot, serverTimestamp, orderBy }
+  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDpgUvNgSaUpq5sqr6rFldC30SXzf_gX24",
+  authDomain: "question-paper-app-23515.firebaseapp.com",
+  projectId: "question-paper-app-23515",
+  storageBucket: "question-paper-app-23515.firebasestorage.app",
+  messagingSenderId: "236946951412",
+  appId: "1:236946951412:web:90eb89a2458627410662a1"
+};
+
+const fbApp = initializeApp(firebaseConfig);
+const auth = getAuth(fbApp);
+const db = getFirestore(fbApp);
+const provider = new GoogleAuthProvider();
+
+let currentUser = null;
+let currentPaperId = null;
+let unsubscribePapersList = null;
+let saveTimer = null;
+
+const authGate = document.getElementById('authGate');
+const appRoot = document.getElementById('appRoot');
+const authStatus = document.getElementById('authStatus');
+const userEmail = document.getElementById('userEmail');
+const papersListEl = document.getElementById('papersList');
+const saveStatus = document.getElementById('saveStatus');
+const fieldIdsAll = ['institute','address','examname','classname','subject','time','fullmarks','arabicline'];
+
+document.getElementById('googleSignInBtn').addEventListener('click', async () => {
+  authStatus.textContent = '';
+  try{
+    await signInWithPopup(auth, provider);
+  }catch(err){
+    authStatus.textContent = 'সাইন ইন করা যায়নি, আবার চেষ্টা করো।';
+  }
+});
+
+document.getElementById('signOutBtn').addEventListener('click', () => {
+  signOut(auth);
+});
+
+document.getElementById('newPaperBtn').addEventListener('click', () => {
+  currentPaperId = null;
+  document.getElementById('institute').value = "দারুস সালিম ইন্টারন্যাশনাল মাদ্রাসা";
+  document.getElementById('address').value = "";
+  document.getElementById('examname').value = "";
+  document.getElementById('classname').value = "";
+  document.getElementById('subject').value = "";
+  document.getElementById('time').value = "";
+  document.getElementById('fullmarks').value = "";
+  document.getElementById('arabicline').value = "";
+  questions = [];
+  renderEditor();
+  renderPreview();
+  updateTotals();
+  highlightActivePaper();
+  saveStatus.textContent = 'নতুন প্রশ্নপত্র — লেখা শুরু করলেই সেভ হবে';
+});
+
+document.getElementById('saveDraftBtn').addEventListener('click', () => {
+  saveNow();
+});
+
+function collectPayload(){
   const fields = {};
-  fieldIds.forEach(id => fields[id] = document.getElementById(id).value);
+  fieldIdsAll.forEach(id => fields[id] = document.getElementById(id).value);
   return { fields, questions };
 }
 
-function applyDraft(draft){
-  if(!draft) return;
-  fieldIds.forEach(id => {
-    if(draft.fields && draft.fields[id] !== undefined){
-      document.getElementById(id).value = draft.fields[id];
+function applyPayload(payload){
+  if(!payload) return;
+  fieldIdsAll.forEach(id => {
+    if(payload.fields && payload.fields[id] !== undefined){
+      document.getElementById(id).value = payload.fields[id];
     }
   });
-  if(Array.isArray(draft.questions)){
-    questions = draft.questions;
-  }
+  questions = Array.isArray(payload.questions) ? payload.questions : [];
   renderEditor();
   renderPreview();
   updateTotals();
 }
 
-async function saveDraft(){
+function paperTitleFor(payload){
+  const f = payload.fields || {};
+  return (f.examname || f.institute || 'প্রশ্নপত্র') + (f.subject ? ' — ' + f.subject : '');
+}
+
+async function saveNow(){
+  if(!currentUser) return;
+  const payload = collectPayload();
+  const title = paperTitleFor(payload);
+  saveStatus.textContent = 'সেভ হচ্ছে...';
   try{
-    const data = JSON.stringify(collectDraft());
-    const result = await window.storage.set(DRAFT_KEY, data, false);
-    draftStatus.textContent = result ? 'খসড়া সেভ হয়েছে ✓' : 'সেভ করা যায়নি, আবার চেষ্টা করো।';
-  }catch(err){
-    draftStatus.textContent = 'সেভ করা যায়নি, আবার চেষ্টা করো।';
-  }
-  setTimeout(() => draftStatus.textContent = '', 3000);
-}
-
-async function loadDraft(silent){
-  try{
-    const result = await window.storage.get(DRAFT_KEY, false);
-    if(result && result.value){
-      applyDraft(JSON.parse(result.value));
-      if(!silent) draftStatus.textContent = 'খসড়া লোড হয়েছে ✓';
-      else draftStatus.textContent = 'আগের খসড়া থেকে লোড করা হয়েছে';
-      setTimeout(() => draftStatus.textContent = '', 3000);
-    } else if(!silent){
-      draftStatus.textContent = 'কোনো সেভ করা খসড়া পাওয়া যায়নি।';
-      setTimeout(() => draftStatus.textContent = '', 3000);
+    if(currentPaperId){
+      await updateDoc(doc(db, 'papers', currentPaperId), {
+        title,
+        payload: JSON.stringify(payload),
+        updatedAt: serverTimestamp()
+      });
+    } else {
+      const ref = await addDoc(collection(db, 'papers'), {
+        ownerId: currentUser.uid,
+        ownerEmail: currentUser.email,
+        title,
+        payload: JSON.stringify(payload),
+        createdAt: serverTimestamp(),
+        updatedAt: serverTimestamp()
+      });
+      currentPaperId = ref.id;
     }
+    saveStatus.textContent = 'সেভ হয়েছে ✓';
+    highlightActivePaper();
   }catch(err){
-    if(!silent){
-      draftStatus.textContent = 'কোনো সেভ করা খসড়া পাওয়া যায়নি।';
-      setTimeout(() => draftStatus.textContent = '', 3000);
-    }
+    saveStatus.textContent = 'সেভ করা যায়নি, আবার চেষ্টা করো।';
   }
+  setTimeout(() => { if(saveStatus.textContent === 'সেভ হয়েছে ✓') saveStatus.textContent = ''; }, 2500);
 }
 
-document.getElementById('saveDraftBtn').addEventListener('click', saveDraft);
-document.getElementById('loadDraftBtn').addEventListener('click', () => loadDraft(false));
-
-renderEditor();
-renderPreview();
-updateTotals();
-
-// Try to silently restore the last draft on open, if one exists
-if(window.storage){
-  loadDraft(true).catch(() => {});
+function scheduleAutoSave(){
+  if(!currentUser) return;
+  saveStatus.textContent = 'টাইপ করছো...';
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveNow, 1200);
 }
+
+function highlightActivePaper(){
+  papersListEl.querySelectorAll('.paper-item').forEach(el => {
+    el.classList.toggle('active', el.dataset.id === currentPaperId);
+  });
+}
+
+function renderPapersList(docs){
+  if(docs.length === 0){
+    papersListEl.innerHTML = '<p class="papers-empty">এখনো কোনো প্রশ্নপত্র সেভ হয়নি।</p>';
+    return;
+  }
+  papersListEl.innerHTML = '';
+  docs.forEach(d => {
+    const data = d.data();
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'paper-item' + (d.id === currentPaperId ? ' active' : '');
+    btn.dataset.id = d.id;
+    const updated = data.updatedAt && data.updatedAt.toDate ? data.updatedAt.toDate() : null;
+    const dateStr = updated ? updated.toLocaleDateString('bn-BD') : '';
+    btn.innerHTML = `<span class="pi-title">${escapeHtml(data.title || 'প্রশ্নপত্র')}</span><span class="pi-meta">${dateStr}</span>`;
+    btn.addEventListener('click', () => {
+      currentPaperId = d.id;
+      applyPayload(JSON.parse(data.payload));
+      highlightActivePaper();
+      saveStatus.textContent = '';
+    });
+    papersListEl.appendChild(btn);
+  });
+}
+
+function listenToPapers(){
+  if(unsubscribePapersList) unsubscribePapersList();
+  const q = query(collection(db, 'papers'), where('ownerId', '==', currentUser.uid), orderBy('updatedAt', 'desc'));
+  unsubscribePapersList = onSnapshot(q, snap => {
+    renderPapersList(snap.docs);
+  }, err => {
+    papersListEl.innerHTML = '<p class="papers-empty">তালিকা লোড করা যায়নি।</p>';
+  });
+}
+
+onAuthStateChanged(auth, user => {
+  if(user){
+    currentUser = user;
+    authGate.style.display = 'none';
+    appRoot.style.display = '';
+    userEmail.textContent = user.displayName ? (user.displayName + ' · ' + user.email) : user.email;
+    listenToPapers();
+  } else {
+    currentUser = null;
+    currentPaperId = null;
+    if(unsubscribePapersList) unsubscribePapersList();
+    authGate.style.display = 'flex';
+    appRoot.style.display = 'none';
+  }
+});
+
+document.getElementById('qlist').addEventListener('input', scheduleAutoSave);
+document.getElementById('qlist').addEventListener('click', scheduleAutoSave);
+document.getElementById('addQ').addEventListener('click', scheduleAutoSave);
+fieldIdsAll.forEach(id => {
+  document.getElementById(id).addEventListener('input', scheduleAutoSave);
+});
 </script>
 </body>
 </html>
